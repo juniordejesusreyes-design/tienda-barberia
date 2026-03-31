@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<h1>🛒 Carrito de compras</h1>
+
+<ul id="listaCarrito"></ul>
+<h3 id="total"></h3>
+
+<button onclick="vaciarCarrito()">Vaciar carrito</button>
+<br><br>
+<a href="productos.html">Seguir comprando</a>
+
+<script>
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let lista = document.getElementById("listaCarrito");
+let total = 0;
+
+// 🔒 Validación para evitar error
+if (Array.isArray(carrito)) {
+    carrito.forEach(p => {
+        let li = document.createElement("li");
+
+        // 👇 por si viene mal guardado
+        let nombre = p.nombre || p;
+        let precio = p.precio || 0;
+
+        li.textContent = nombre + " - $" + precio;
+        lista.appendChild(li);
+
+        total += Number(precio);
+    });
+}
+
+document.getElementById("total").textContent = "Total: $" + total;
+
+function vaciarCarrito() {
+    localStorage.removeItem("carrito");
+    location.reload();
+}
+</script>
+
+</body>
+</html>

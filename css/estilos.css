@@ -1,0 +1,106 @@
+body {
+    font-family: Arial;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+div {
+    background: white;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 200px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: burlywood;
+}
+
+/* NAVBAR MODERNA */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #00ff88;
+}
+
+.banner {
+    background: url('../img/banner.jpg') center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 40px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    background: black;
+    color: white;
+    padding: 10px;
+    border: none;
+}
