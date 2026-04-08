@@ -1,0 +1,99 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #121212;
+  color: white;
+}
+
+.img-cd {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* PANTALLAS */
+.pantalla {
+  display: none;
+  min-height: 250vh;
+  padding: 30px;
+}
+
+.activa {
+  display: block;
+}
+
+/* BOTONES */
+button {
+  background: #1db954;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1ed760;
+}
+
+/* INPUTS */
+input {
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  margin: 5px;
+}
+
+/* GRID DE CDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* TARJETAS */
+.card {
+  background: #181818;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin: 5px 0;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #b3b3b3;
+}
+
+/* CONTENEDOR */
+#contenedor {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+#tablaCDs {
+  flex: 3;
+}
+
+#carrito {
+  flex: 1;
+}
+
+/* CARRITO */
+#carrito {
+  background: #181818;
+  padding: 15px;
+  border-radius: 15px;
+  width: 250px;
+}

@@ -1,32 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Beauty & Barber Shop</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <title>Tienda de CDs</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>💈 Beauty & Barber Shop</h1>
+<!-- 🏠 INICIO -->
+<div id="inicio" class="pantalla activa">
+  <h1>🎵 Bienvenido a la Tienda de CDs</h1>
+  <p>Explora y compra tus discos favoritos</p>
+  <button onclick="irATienda()">Entrar a la tienda</button>
+</div>
 
-<header class="navbar">
-    <div class="logo">💈 BarberShop</div>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="carrito.html">Carrito</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+<!-- 🛒 TIENDA -->
+<div id="tienda" class="pantalla">
 
-<section class="banner">
-    <h1>Productos profesionales para barbería</h1>
-    <p>Calidad garantizada para tu negocio 💈</p>
-</section>
+  <h2>🛒 Tienda de CDs</h2>
+  <button onclick="volverInicio()">🏠 Menú Principal</button>
 
-</header>
+  <br><br>
 
-<h2>Bienvenido</h2>
-<p>Tienda online para barberías</p>
+  <input type="text" id="buscar" placeholder="Buscar CD..." onkeyup="buscarCD()">
 
-<script src="js/script.js"></script>
+  <input type="text" id="nombre" placeholder="Nombre del CD" onkeyup="filtrarTodo()">
+  <input type="text" id="artista" placeholder="Artista" onkeyup="filtrarTodo()">
+  <input type="number" id="precio" placeholder="Precio" onkeyup="filtrarTodo()">
+
+  <br>
+
+  <button onclick="agregarCD()">Guardar</button>
+  <button onclick="mostrarCDs()">Mostrar</button>
+  <button onclick="cargarEjemplos()">Cargar Ejemplos</button>
+
+  <div id="contenedor">
+
+    <!-- 📋 GRID -->
+    <div id="tablaCDs" class="grid"></div>
+
+    <!-- 🛒 CARRITO -->
+    <div id="carrito">
+      <h3>🛒 Carrito</h3>
+      <ul id="carritoLista"></ul>
+      <p><strong>Total: $<span id="total">0</span></strong></p>
+
+      <button onclick="vaciarCarrito()">Vaciar</button>
+      <button onclick="comprar()">Comprar</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
